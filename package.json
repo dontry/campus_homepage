@@ -1,0 +1,24 @@
+{
+  "name": "mobile_homepage",
+  "version": "1.0.0",
+  "description": "ava microschool mobile homepage",
+  "main": "entry.js",
+  "scripts": {
+    "test": "start"
+  },
+  "keywords": [
+    "mobile"
+  ],
+  "author": "dontry",
+  "license": "ISC",
+  "devDependencies": {
+    "fullpage.js": "^2.7.9",
+    "gulp": "^3.4.1",
+    "jquery": "^2.2.3",
+    "parcelify": "^2.1.0"
+  },
+  "style": [
+    "./node_modules/fullpage.js/jquery.fullPage.css",
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+  ]
+}
