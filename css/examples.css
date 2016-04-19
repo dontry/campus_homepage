@@ -101,114 +101,214 @@ header {
   z-index: 999; }
 
 .section {
+  position: relative;
+  overflow: hidden;
+  min-width: 1020px;
   overflow: hidden; }
 
 .slide .banner {
-  width: 100%; }
+  width: 100%;
+  height: 100%;
+  min-width: 1020px; }
+
+.fp-controlArrow {
+  border: none;
+  width: 5rem !important;
+  height: 6.25rem !important;
+  opacity: .7; }
+
+.fp-controlArrow:hover {
+  opacity: 1; }
+
+.fp-controlArrow.fp-prev {
+  background: url(../imgs/pageleft.png) no-repeat; }
+
+.fp-controlArrow.fp-next {
+  background: url(../imgs/pageRight.png) no-repeat; }
+
+.container {
+  position: relative;
+  width: 1020px;
+  height: 100%;
+  margin: 0 auto; }
 
 /*navigation*/
 #navigation {
-  background-color: rgba(41, 60, 85, 0.2);
-  border-bottom: 0px; }
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 0px;
+  height: 5rem; }
+  #navigation .navbar-collapse {
+    height: 100% !important; }
   #navigation .navbar-brand {
-    padding: 10px;
-    margin-left: 0; }
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 0; }
   #navigation .navbar-logo {
-    height: 30px; }
+    height: 40px; }
+
+.navbar-collapse {
+  float: right; }
 
 #nav-menu {
-  margin-right: 0; }
+  margin-right: 0;
+  height: 100%; }
   #nav-menu li {
     display: inline-block;
-    border-top: 5px solid transparent; }
-    #nav-menu li.active {
-      border-top: 5px solid #aa314d; }
-    #nav-menu li:hover {
-      background-color: rgba(28, 134, 209, 0.6); }
+    border-top: 5px solid transparent;
+    width: 7rem;
+    height: 100%;
+    line-height: 5rem;
+    text-align: center; }
     #nav-menu li a {
+      margin-top: .5rem;
       background-color: transparent;
-      color: #fff; }
+      color: #999; }
+    #nav-menu li.cur {
+      border-top: 5px solid #24a6e1; }
+      #nav-menu li.cur a {
+        color: #fff; }
+    #nav-menu li:hover {
+      background-color: rgba(28, 134, 209, 0.4); }
+      #nav-menu li:hover a {
+        color: #fff; }
 
-/*page 1*/
+/* page 1 */
 /*page 2*/
-#section1 .content-wrapper {
+#section1 .content {
   position: absolute;
-  top: 20%;
-  left: 15%;
-  z-index: 20;
-  width: 23%;
-  opacity: 0;
-  transition: all 1s; }
-  #section1 .content-wrapper h1 {
-    font-size: 4.5em;
-    margin-bottom: .3em; }
-  #section1 .content-wrapper p {
-    font-size: 2em;
-    color: #888; }
-#section1 .phone {
-  position: absolute;
-  top: 22%;
-  right: -40%;
-  width: 40%;
-  height: 40%;
-  z-index: 20;
-  transition: all 1s;
-  opacity: 0;
-  max-width: 32rem; }
-#section1 .bottom-wrapper {
-  position: absolute;
-  z-index: 10;
-  bottom: -35%;
-  width: 100%;
-  height: 35%;
-  background-color: #efefef;
-  padding: 3% 5%;
+  top: 11.6rem;
+  left: 50%;
+  z-index: 30;
   text-align: center;
+  transform: translateX(-50%);
   opacity: 0;
   transition: all 1s; }
-  #section1 .bottom-wrapper li {
-    display: inline-block;
-    width: 33%;
-    transition: all 1s;
-    margin-top: 35%; }
-    #section1 .bottom-wrapper li .item-icon {
-      margin-bottom: .5rem; }
-    #section1 .bottom-wrapper li .item-title {
-      margin-bottom: .5rem; }
-    #section1 .bottom-wrapper li .item-info {
-      line-height: 1.5; }
-
-#section1.active .content-wrapper {
-  opacity: 1;
-  transition-delay: 0.7s; }
-#section1.active .phone {
-  right: 9%;
-  transition-delay: 0.7s;
-  opacity: 1; }
-#section1.active .bottom-wrapper {
+  #section1 .content h1 {
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+    color: #333; }
+  #section1 .content p {
+    color: #999;
+    font-size: 1em; }
+#section1 .bg {
+  position: absolute;
   bottom: 0;
-  transition-delay: 0.5s;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/homePic_02.jpg) no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.3;
+  transition: all 1s; }
+
+#section1.active .content,
+#section1.active .bg {
   opacity: 1; }
-  #section1.active .bottom-wrapper li {
-    margin-top: 0;
-    transition-delay: 1s; }
+
+/*page 3*/
+#section2 {
+  background-color: #191c1e; }
+  #section2 .copywriting {
+    position: absolute;
+    top: 17.5rem;
+    left: 5.625rem; }
+    #section2 .copywriting li {
+      display: none; }
+      #section2 .copywriting li .title {
+        color: #ff7c3f;
+        margin-bottom: 1rem; }
+      #section2 .copywriting li:nth-child(1) .title {
+        color: #37aeff; }
+      #section2 .copywriting li:nth-child(2) .title {
+        color: #37aeff; }
+      #section2 .copywriting li:nth-child(3) .title {
+        color: #ff6346; }
+      #section2 .copywriting li:nth-child(4) .title {
+        color: #3cc3db; }
+      #section2 .copywriting li:nth-child(5) .title {
+        color: #30bacb; }
+      #section2 .copywriting li:nth-child(6) .title {
+        color: #52a1f8; }
+      #section2 .copywriting li .content {
+        font-size: 1em;
+        letter-spacing: .1em;
+        width: 26rem;
+        color: #ddd; }
+    #section2 .copywriting li.cur {
+      display: block; }
+  #section2 .phone {
+    position: absolute;
+    top: 10.625rem;
+    right: 5.625rem;
+    z-index: 20;
+    width: 16.25rem;
+    height: 32.5rem;
+    background: url(../imgs/pic_iphone_new.png) no-repeat;
+    background-size: 260px 520px; }
+    #section2 .phone .screen {
+      width: 14rem;
+      height: 25rem;
+      overflow: hidden;
+      margin-top: 3.8rem;
+      margin-left: 1.2rem;
+      border-radius: 3px; }
+    #section2 .phone img {
+      width: 14rem;
+      height: 25rem;
+      display: none; }
+    #section2 .phone img:first-child {
+      display: block; }
+  #section2 .nav {
+    position: absolute;
+    z-index: 20;
+    bottom: 5rem;
+    width: 100%;
+    text-align: center; }
+    #section2 .nav li {
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-size: 2.5rem 2.5rem;
+      cursor: pointer; }
+    #section2 .nav li + li {
+      margin-left: 3.125rem; }
+    #section2 .nav li:nth-child(1) {
+      background: url(../imgs/ic_home_1.png) no-repeat; }
+      #section2 .nav li:nth-child(1).cur {
+        display: inline-block;
+        background: url(../imgs/ic_home_1_select.png) no-repeat; }
+    #section2 .nav li:nth-child(2) {
+      background: url(../imgs/ic_home_2.png) no-repeat; }
+      #section2 .nav li:nth-child(2).cur {
+        display: inline-block;
+        background: url(../imgs/ic_home_2_select.png) no-repeat; }
+    #section2 .nav li:nth-child(3) {
+      background: url(../imgs/ic_home_3.png) no-repeat; }
+      #section2 .nav li:nth-child(3).cur {
+        display: inline-block;
+        background: url(../imgs/ic_home_3_select.png) no-repeat; }
+    #section2 .nav li:nth-child(4) {
+      background: url(../imgs/ic_home_4.png) no-repeat; }
+      #section2 .nav li:nth-child(4).cur {
+        display: inline-block;
+        background: url(../imgs/ic_home_4_select.png) no-repeat; }
+    #section2 .nav li:nth-child(5) {
+      display: inline-block;
+      background: url(../imgs/ic_home_5.png) no-repeat; }
+      #section2 .nav li:nth-child(5).cur {
+        display: inline-block;
+        background: url(../imgs/ic_home_5_select.png) no-repeat; }
+    #section2 .nav li:nth-child(6) {
+      display: inline-block;
+      background: url(../imgs/ic_home_6.png) no-repeat; }
+      #section2 .nav li:nth-child(6).cur {
+        display: inline-block;
+        background: url(../imgs/ic_home_6_select.png) no-repeat; }
 
 /*page4*/
-#section3 .footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  text-align: center;
-  font-size: .75em;
-  color: #fff;
-  background-color: #666;
-  line-height: 1.5em;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  z-index: 10; }
 #section3 .download-banner {
   position: absolute;
-  top: 5%;
+  top: 7rem;
   height: 50%;
   width: 100%;
   background: url(../imgs/download_blur_bg.jpg) no-repeat;
@@ -223,7 +323,7 @@ header {
     transition: all 1s; }
 #section3 .logogroup {
   position: absolute;
-  top: 60%;
+  top: 65%;
   width: 100%;
   height: 20%;
   text-align: center; }
@@ -232,9 +332,9 @@ header {
     width: 30%; }
     #section3 .logogroup li .logo-download {
       margin: 0 auto;
-      width: 100px;
-      height: 100px;
-      margin-bottom: 10%;
+      width: 6.25rem;
+      height: 6.25rem;
+      margin-bottom: 1rem;
       border-radius: 50%;
       border: 2px solid #444;
       background-repeat: no-repeat;
@@ -268,5 +368,18 @@ header {
 #section3.active .download-banner li {
   margin-top: 10%;
   transition-delay: 0.3s; }
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-size: .75em;
+  color: #fff;
+  background-color: #666;
+  line-height: 1.5em;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  z-index: 10; }
 
 /*# sourceMappingURL=examples.css.map */

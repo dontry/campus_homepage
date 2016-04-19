@@ -7,7 +7,7 @@
     "test": "start",
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "start": "webpack-dev-server --config webpack.config.dev.js --progress --colors",
+    "start": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
     "compress": "webpack -p"
   },
   "keywords": [
@@ -16,8 +16,11 @@
   "author": "dontry",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^3.3.6",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "font-loader": "^0.1.2",
     "fullpage.js": "^2.7.9",
     "gulp": "^3.4.1",
     "has-flag": "^2.0.0",
@@ -26,9 +29,10 @@
     "jquery": "^2.2.3",
     "parcelify": "^2.1.0",
     "sass-loader": "^3.2.0",
-    "scss-loader": "0.0.1",
     "style-loader": "^0.13.1",
-    "webpack": "^1.12.15"
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.15",
+    "webpack-dev-server": "^1.14.1"
   },
   "style": [
     "./node_modules/fullpage.js/jquery.fullPage.css",
