@@ -1,5 +1,6 @@
 /* Custom CSS
  * --------------------------------------- */
+@import "sprite.scss";
 
 .section {
     overflow: hidden;
@@ -10,8 +11,6 @@
 
 .fp-controlArrow {
     border: none;
-    width: 5rem !important;
-    height: 6.25rem !important;
     opacity: .7;
 }
 
@@ -20,11 +19,13 @@
 }
 
 .fp-controlArrow.fp-prev {
-    background: url(../imgs/banner_prev.png) no-repeat;
+    // background: url(../imgs/banner_prev.png) no-repeat;
+    @include sprite($banner-prev);
 }
 
 .fp-controlArrow.fp-next {
-    background: url(../imgs/banner_next.png) no-repeat;
+    // background: url(../imgs/banner_next.png) no-repeat;
+    @include sprite($banner-next);
 }
 
 
@@ -166,54 +167,65 @@
             display: inline-block;
             width: 2.5rem;
             height: 2.5rem;
-            background-size: 2.5rem 2.5rem;
             cursor: pointer;
         }
         li + li {
             margin-left: 3.125rem;
         }
         li:nth-child(1) {
-            background: url(../imgs/ic_home_1.png) no-repeat;
+            // background: url(../imgs/ic_home_1.png) no-repeat;
+            @include sprite($ic-home-1);
             &.cur {
                 display: inline-block;
-                background: url(../imgs/ic_home_1_select.png) no-repeat;
+                // background: url(../imgs/ic_home_1_select.png) no-repeat;
+                @include sprite($ic-home-1-select);
             }
         }
         li:nth-child(2) {
-            background: url(../imgs/ic_home_2.png) no-repeat;
+            // background: url(../imgs/ic_home_2.png) no-repeat;
+            @include sprite($ic-home-2);
             &.cur {
                 display: inline-block;
-                background: url(../imgs/ic_home_2_select.png) no-repeat;
+                // background: url(../imgs/ic_home_2_select.png) no-repeat;
+                @include sprite($ic-home-2-select);
             }
         }
         li:nth-child(3) {
-            background: url(../imgs/ic_home_3.png) no-repeat;
+            // background: url(../imgs/ic_home_3.png) no-repeat;
+            @include sprite($ic-home-3);
             &.cur {
                 display: inline-block;
-                background: url(../imgs/ic_home_3_select.png) no-repeat;
+                // background: url(../imgs/ic_home_3_select.png) no-repeat;
+                @include sprite($ic-home-3-select);
             }
         }
         li:nth-child(4) {
-            background: url(../imgs/ic_home_4.png) no-repeat;
+            // background: url(../imgs/ic_home_4.png) no-repeat;
+            @include sprite($ic-home-4);
             &.cur {
                 display: inline-block;
-                background: url(../imgs/ic_home_4_select.png) no-repeat;
+                // background: url(../imgs/ic_home_4_select.png) no-repeat;
+                @include sprite($ic-home-4-select);
             }
         }
         li:nth-child(5) {
             display: inline-block;
-            background: url(../imgs/ic_home_5.png) no-repeat;
+            // background: url(../imgs/ic_home_5.png) no-repeat;
+            @include sprite($ic-home-5);
             &.cur {
                 display: inline-block;
-                background: url(../imgs/ic_home_5_select.png) no-repeat;
+                // background: url(../imgs/ic_home_5_select.png) no-repeat;
+                @include sprite($ic-home-5-select);
             }
         }
         li:nth-child(6) {
             display: inline-block;
-            background: url(../imgs/ic_home_6.png) no-repeat;
+            // background: url(../imgs/ic_home_6.png) no-repeat;
+            @include sprite($ic-home-6);
             &.cur {
                 display: inline-block;
-                background: url(../imgs/ic_home_6_select.png) no-repeat;
+                // background: url(../imgs/ic_home_6_select.png) no-repeat;
+                @include sprite($ic-home-6-select);
             }
         }
     }
@@ -253,12 +265,12 @@
             height: 3rem;
         }
         .logo-ios {
-            background: url(../imgs/ios_normal.png) no-repeat;
-            background-size: 3rem 3rem;
+            // background: url(../imgs/ios_normal.png) no-repeat;
+            @include sprite($ios-normal);
         }
         .logo-android {
-            background: url(../imgs/android_normal.png) no-repeat;
-            background-size: 3rem 3rem;
+            // background: url(../imgs/android_normal.png) no-repeat;
+            @include sprite($android-normal);
         }
         .content {
             display: inline-block;
@@ -278,10 +290,12 @@
     .container-download:hover {
         background-color: #f2f2f2;
         .logo-ios {
-            background-image: url(../imgs/ios_hover.png);
+            // background-image: url(../imgs/ios_hover.png);
+            @include sprite($ios-hover);
         }
         .logo-android {
-            background-image: url(../imgs/android_hover.png);
+            // background-image: url(../imgs/android_hover.png);
+            @include sprite($android-hover);
         }
     }
     .phone-code {
