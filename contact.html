@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="bundle.css">
     <link rel="stylesheet" href="css/examples.css">
+    <script src="bundle.js"></script>
     <title>contact</title>
     <style>
     .container {
@@ -29,7 +30,7 @@
                 <img src="imgs/homeLogo.png" alt="logo" class="navbar-logo">
             </a>
             <div class="collapse navbar-collapse">
-                <ul id="nagit v-menu" class="nav navbar-nav navbar-right">
+                <ul id="nav-menu" class="nav navbar-nav navbar-right">
                     <li id="nav-intro"  ><a href="index.html">首页</a></li>
                     <li id="nav-feature"><a href="">新手入门</a></li>
                     <li id="nav-content" ><a href="">加入我们</a></li>
@@ -58,7 +59,6 @@
         <br>
         <p>京ICP备14041923号</p>
     </div>
-    <script src="bundle.js"></script>
     <script>
         $("#navigation li").on("click", function() {
             $(this).addClass("cur").siblings("li").removeClass("cur");
