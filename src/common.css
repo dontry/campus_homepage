@@ -117,7 +117,7 @@ header {
     padding: 0; }
   #navigation .navbar-logo {
     height: 40px;
-    margin-top: 20px; }
+    margin-top: 40px; }
 
 .navbar-collapse {
   float: right; }
@@ -129,7 +129,7 @@ header {
     display: inline-block;
     border-top: 5px solid transparent;
     width: 7rem;
-    height: 95%;
+    height: 100%;
     line-height: 5rem;
     text-align: center; }
     #nav-menu li a {

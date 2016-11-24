@@ -1,7 +1,7 @@
 /* Custom CSS
  * --------------------------------------- */
-@import "sprite.scss";
 
+@import "sprite.scss";
 .section {
     overflow: hidden;
     overflow: hidden;
@@ -28,13 +28,23 @@
     @include sprite($banner-next);
 }
 
+#fp-nav ul li a span {
+    background-color: #65a6ff;
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: #999;
+}
+
 
 /* page 1 */
 
 #section0 {
-    .slide .banner {
-        width: 1841px;
+    .banner {
+        width: 100%;
+        min-width: 900px;
         height: 100%;
+        background-size: cover;
     }
 }
 
@@ -50,6 +60,7 @@
         text-align: center;
         opacity: 0;
         transition: all 2s;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         h1 {
             margin-bottom: 1.25rem;
@@ -68,7 +79,7 @@
         width: 100%;
         height: 100%;
         background: url(../imgs/homePic_02.jpg) no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
         opacity: 0;
         transition: all 2s;
     }
@@ -130,13 +141,13 @@
     }
     .phone {
         position: absolute;
-        top: 10.625rem;
-        right: 5.625rem;
+        top: 6.625rem;
+        right: 6.625rem;
         z-index: 20;
         width: 16.25rem;
-        height: 32.5rem;
+        height: 30.5rem;
         background: url(../imgs/pic_iphone_new.png) no-repeat;
-        background-size: 260px 520px;
+        background-size: contain;
         opacity: 0;
         transition: all 2s;
         .screen {
@@ -145,12 +156,12 @@
             margin-left: 1.2rem;
             border-radius: 3px;
             width: 14rem;
-            height: 25rem;
+            height: 23rem;
         }
         img {
             display: none;
-            width: 14rem;
-            height: 25rem;
+            width: 13rem;
+            height: 23rem;
         }
         img:first-child {
             display: block;
@@ -233,7 +244,7 @@
 
 #section2.active {
     .nav {
-        bottom: 5rem;
+        bottom: 2rem;
     }
     .copywriting,
     .phone {
@@ -247,8 +258,8 @@
 #section3 {
     .wrapper-download {
         position: absolute;
-        top: 18.75rem;
-        left: 6.75rem;
+        top: 13.75rem;
+        left: 12.75rem;
         z-index: 20;
         cursor: pointer;
     }
@@ -300,12 +311,11 @@
     }
     .phone-code {
         position: absolute;
-        position: right;
-        top: 12rem;
+        top: 10rem;
         right: 11rem;
         z-index: 20;
-        width: 16.75rem;
-        height: 33rem;
+        width: 12.75rem;
+        height: 25rem;
     }
 }
 

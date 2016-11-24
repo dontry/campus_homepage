@@ -8,21 +8,22 @@
          sectionsColor: ['#fff', '#fff', '#191c1e', '#fff'],
          anchors: ['page1', 'page2', 'page3', 'page4'],
          css3: true,
-         slidesNavigation: true,
-         // navigation: true,
-         // navigationTooltips: ['首页','功能介绍','内容','下载'],
+         // slidesNavigation: true,
+         navigation: true,
+         navigationTooltips: ['首页','功能介绍','内容','下载'],
+         navigationColor: '#000eea',
          scrollBar: true,
-         loopHorizontal: true,
-         afterLoad: function(anchor, index) {
-             if (index === 1) {
-                 interval = setInterval(function() {
-                     $.fn.fullpage.moveSlideRight();
-                     console.log("move slide");
-                 }, 5000);
-             } else {
-                 clearInterval(interval);
-             }
-         }
+         // loopHorizontal: true,
+         // afterLoad: function(anchor, index) {
+         //     if (index === 1) {
+         //         interval = setInterval(function() {
+         //             $.fn.fullpage.moveSlideRight();
+         //             console.log("move slide");
+         //         }, 5000);
+         //     } else {
+         //         clearInterval(interval);
+         //     }
+         // }
      });
 
      $(".pointer").on("mouseover", function() {
@@ -36,3 +37,9 @@
          $(this).addClass("cur").siblings("li").removeClass("cur");
      });
  });
+
+$(document).ready(function() {
+    $("#navigation li").on("click", function() {
+        $(this).addClass("cur").siblings("li").removeClass("cur");
+    });
+})
