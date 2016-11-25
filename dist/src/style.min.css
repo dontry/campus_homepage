@@ -151,6 +151,7 @@ header {
 
 #nav-menu li {
     display: inline-block;
+    box-sizing: border-box;
     border-top: 5px solid transparent;
     width: 7rem;
     height: 100%;
